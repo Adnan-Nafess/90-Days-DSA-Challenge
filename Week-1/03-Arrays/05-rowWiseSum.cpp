@@ -1,22 +1,18 @@
 #include <iostream>
+#include <limits.h>
 using namespace std;
 
-// Find Min element in a 2D array
-int findMin(int arr[][4], int row, int col) {
-
-    int minAns = INT_MAX;
+// print row wise sum of a 2D array
+void rowWiseSum(int arr[][4], int row, int col) {
 
     for(int i=0; i<row; i++) {
+        int sum = 0;
         for(int j=0; j<col; j++) {
-            // Check if the current element is less than maxAns
-            // If it is, update minAns
-            if(arr[i][j] < minAns) {
-                minAns = arr[i][j]; 
-            }
+            sum += arr[i][j];
         }
-    }
 
-    return minAns;
+        cout << "Print the sum of 2d array row wise: " << sum << endl;
+    }
 
 }
 
@@ -30,6 +26,6 @@ int main() {
 
     int row = 3, col = 4;
 
-    cout << "Printing the max No. : " << findMin(arr, row, col) << endl;
+    rowWiseSum(arr, row, col);
 
 } 
