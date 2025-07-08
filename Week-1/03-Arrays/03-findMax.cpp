@@ -30,7 +30,6 @@ int main() {
     };
 
     int row = 3, col = 4;
-    int target = 11;
 
     cout << "Printing the max No. : " << findMax(arr, row, col) << endl;
 
